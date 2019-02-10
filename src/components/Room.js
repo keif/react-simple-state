@@ -1,23 +1,26 @@
 import React from "react";
 import "./room.css";
+
+import Button from "./../components/Button";
+
 class Room extends React.Component {
 	state = {
 		isLightOn: true
 	};
 
-    switchOnLight = () => {
+	switchOnLight = () => {
 		this.setState({
 			isLightOn: true
 		});
-    }
+	};
 
-    switchOffLight = () => {
+	switchOffLight = () => {
 		this.setState({
 			isLightOn: false
 		});
-    }
+	};
 
-    toggleLight = () => {
+	toggleLight = () => {
 		this.setState({
 			isLightOn: !this.state.isLightOn
 		});
@@ -29,9 +32,9 @@ class Room extends React.Component {
 			<div className={`room ${brightness}`}>
 				The room is {brightness}
 				<br />
-				<button onClick={this.toggleLight}>flip</button>
-                <button onClick={this.switchOnLight}>on</button>
-                <button onClick={this.switchOffLight}>off</button>
+				<Button onClick={this.toggleLight} value="flip" />
+				<Button onClick={this.switchOnLight} value="on" />
+				<Button onClick={this.switchOffLight} value="off" />
 			</div>
 		);
 	}

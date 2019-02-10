@@ -1,9 +1,9 @@
 .room {
-    border: 1px solid gray;
-    border-radius: 10px;
+	border: 1px solid gray;
+	border-radius: 10px;
 	height: 100%;
-    margin: 0 auto;
-    padding: 20px;
+	margin: 0 auto;
+	padding: 20px;
 	width: 80%;
 }
 
@@ -15,17 +15,4 @@
 .dark {
 	background-color: black;
 	color: white;
-}
-
-button {
-    margin-top: 10px;
-	padding: 10px 15px;
-}
-
-.lit button {
-}
-
-.dark button {
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
 }
