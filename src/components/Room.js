@@ -5,7 +5,19 @@ class Room extends React.Component {
 		isLightOn: true
 	};
 
-	flipLight = () => {
+    switchOnLight = () => {
+		this.setState({
+			isLightOn: true
+		});
+    }
+
+    switchOffLight = () => {
+		this.setState({
+			isLightOn: false
+		});
+    }
+
+    toggleLight = () => {
 		this.setState({
 			isLightOn: !this.state.isLightOn
 		});
@@ -17,7 +29,9 @@ class Room extends React.Component {
 			<div className={`room ${brightness}`}>
 				The room is {brightness}
 				<br />
-				<button onClick={this.flipLight}>flip</button>
+				<button onClick={this.toggleLight}>flip</button>
+                <button onClick={this.switchOnLight}>on</button>
+                <button onClick={this.switchOffLight}>off</button>
 			</div>
 		);
 	}
